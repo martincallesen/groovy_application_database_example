@@ -1,3 +1,4 @@
-FROM adoptopenjdk:16-jre-hotspot
-COPY build/libs/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM gradle:7.1.0-jdk16
+COPY . /project
+WORKDIR /project
+RUN gradle bootRun --no-daemon
