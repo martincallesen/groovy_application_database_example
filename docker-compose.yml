@@ -1,12 +1,24 @@
 version: '2'
 
 services:
+
   app:
-    image: 'docker-spring-boot-postgres:latest'
+    image: 'groovy-database-application-example:latest'
     build:
       context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
+      - build-app
+
+  build-app:
+    image: 'gradle:7.1.0-jdk16'
+    command: 'gradle clean build --no-daemon'
+    working_dir: /home/gradle/project
+    depends_on:
+      - db
+    volumes:
+    - .:/home/gradle/project
 
   db:
     image: 'postgres:13.1-alpine'
@@ -14,4 +26,4 @@ services:
       - POSTGRES_USER=compose-postgres
       - POSTGRES_PASSWORD=compose-postgresd
     ports:
-      - 5432
+      - 5432:5432
