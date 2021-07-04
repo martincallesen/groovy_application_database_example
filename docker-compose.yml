@@ -7,7 +7,6 @@ services:
     entrypoint: 'java -jar /home/gradle/project/build/libs/groovy_application_database_example.jar'
     depends_on:
       - db
-      - build
     volumes:
       - .:/home/gradle/project
 
