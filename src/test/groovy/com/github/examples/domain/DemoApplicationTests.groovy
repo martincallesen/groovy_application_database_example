@@ -1,4 +1,4 @@
-package com.github.groovy.database.example
+package com.github.examples.domain
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

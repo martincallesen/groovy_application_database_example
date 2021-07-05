@@ -1,4 +1,4 @@
-package com.github.groovy.database.example
+package com.github.examples
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

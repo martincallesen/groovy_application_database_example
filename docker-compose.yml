@@ -25,4 +25,4 @@ services:
       - POSTGRES_USER=compose-postgres
       - POSTGRES_PASSWORD=compose-postgresd
     ports:
-      - 5432
+      - 5432:5432
