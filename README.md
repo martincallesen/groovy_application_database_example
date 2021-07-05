@@ -1,5 +1,4 @@
 # Description
-
 This shows an example on a springboot application written in groovy that depends on a database 
 For more detail information https://www.baeldung.com/spring-data-jpa-generate-db-schema
 
