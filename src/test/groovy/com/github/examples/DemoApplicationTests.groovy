@@ -1,4 +1,4 @@
-package com.github.examples.domain
+package com.github.examples
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
