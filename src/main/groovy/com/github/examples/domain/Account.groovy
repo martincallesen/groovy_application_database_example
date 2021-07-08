@@ -13,14 +13,24 @@ import javax.persistence.Table
 class Account {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long id
 
     @Column(nullable = false, length = 100)
-    private String name;
+    private String name
 
     @Column(name = "email_address")
-    private String emailAddress;
+    private String emailAddress
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
-    private List<AccountSetting> accountSettings = new ArrayList<>();
+    private List<AccountSetting> accountSettings = new ArrayList<>()
+
+
+    @Override
+    String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", emailAddress='" + emailAddress +
+                '}'
+    }
 }
