@@ -13,15 +13,15 @@ import javax.persistence.Table
 class AccountSetting {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long id
 
     @Column(name = "name", nullable = false)
-    private String settingName;
+    private String settingName
 
     @Column(name = "value", nullable = false)
-    private String settingValue;
+    private String settingValue
 
     @ManyToOne
     @JoinColumn(name ="account_id", nullable = false)
-    private Account account;
+    private Account account
 }
