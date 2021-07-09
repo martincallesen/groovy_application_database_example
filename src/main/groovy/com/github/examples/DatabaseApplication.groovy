@@ -18,7 +18,7 @@ class DatabaseApplication {
 
 	@Bean
 	CommandLineRunner demo(AccountRepository repository) {
-		return (args) -> {
+		(args) -> {
 			// save a few accounts
 			repository.save(DataGenerator.generateRandomAccount())
 

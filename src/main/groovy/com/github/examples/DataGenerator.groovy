@@ -14,8 +14,8 @@ class DataGenerator {
         "$name $surName"
     }
 
-    private static def randomEmail() {
-        def randomString = RandomStringUtils.random(50, true, true)
+    private static String randomEmail() {
+        String randomString = RandomStringUtils.random(50, true, true)
         "$randomString@thing.dk"
     }
 }
